@@ -4,7 +4,7 @@
 --
 --
 -- for going back to normal mode from insert mode and saving a file in insert mode
+vim.api.nvim_set_keymap("i", "kj", "<ESC>", { noremap = false })
 vim.api.nvim_set_keymap("i", "jj", "<ESC>", { noremap = false })
-vim.keymap.set({ "n", "i" }, "ss", "<ESC>:write<CR>", { noremap = false })
-vim.keymap.set({ "n", "i" }, "vv", "<ESC>V", { noremap = false })
+vim.api.nvim_set_keymap("n", "ss", ":write<CR>", { noremap = false })
 vim.api.nvim_set_keymap("n", "sa", "ggVG", { noremap = false })
